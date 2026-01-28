@@ -1,0 +1,51 @@
+[package]
+name = "duroxide-sql"
+version = "0.1.0"
+edition = "2021"
+authors = ["Affan Dar <affandar@gmail.com>"]
+description = "A MS-SQL/Azure SQL provider implementation for Duroxide, a durable task orchestration framework"
+license = "MIT"
+repository = "https://github.com/affandar/duroxide-sql"
+readme = "README.md"
+keywords = ["duroxide", "mssql", "azure-sql", "workflow", "orchestration", "durable-execution"]
+categories = ["database", "asynchronous"]
+
+[dependencies]
+# Duroxide core with provider testing support
+duroxide = { git = "https://github.com/affandar/duroxide.git", features = ["provider-test"] }
+
+# Async runtime
+async-trait = "0.1"
+tokio = { version = "1", features = ["full"] }
+
+# MS-SQL driver (tiberius) with connection pooling
+tiberius = { version = "0.12", default-features = false, features = ["rustls", "chrono", "tds73"] }
+bb8 = "0.8"
+bb8-tiberius = "0.15"
+tokio-util = { version = "0.7", features = ["compat"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Utilities
+uuid = { version = "1.0", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging/Tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Environment/Config
+dotenvy = "0.15"
+
+# Migration embedding
+include_dir = "0.7"
+
+[dev-dependencies]
+tempfile = "3"
+tokio-test = "0.4"
+paste = "1.0"
+

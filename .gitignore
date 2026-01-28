@@ -1,0 +1,39 @@
+# Build artifacts
+/target/
+Cargo.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Keep sample env file
+!.env.sample
+!.env.example
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test databases
+*.db
+*.sqlite
+
+# Logs
+*.log
+logs/
+
+# Coverage
+*.profraw
+coverage/
+tarpaulin-report.html
+
+# Stress test results
+stress-test-results.md
+STRESS_TEST_SUMMARY.md
