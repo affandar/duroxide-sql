@@ -1,5 +1,9 @@
 # duroxide-sql
 
+> ⚠️ **EXPERIMENTAL** ⚠️
+> 
+> This project is experimental and under active development. It is **not recommended for production use**. APIs may change without notice, and there may be bugs or missing features.
+
 A MS-SQL/Azure SQL provider implementation for [Duroxide](https://github.com/affandar/duroxide), a durable task orchestration framework for Rust.
 
 ## Features
