@@ -37,3 +37,4 @@ tarpaulin-report.html
 # Stress test results
 stress-test-results.md
 STRESS_TEST_SUMMARY.md
+.vscode/
